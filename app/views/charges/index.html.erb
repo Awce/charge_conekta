@@ -1,0 +1,60 @@
+<h1>Crear un Cargo.</h1>
+<div class="row">
+  <div class="large-6 large-centered">
+    <%= form_tag('charges/create', id: 'card-form') do %>
+    <fieldset>
+      <legend>Ingresa tus datos</legend>
+      <span class="card-errors"></span>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="form-row">
+            <label>
+              <span>Nombre del Tarjetahabiente</span>
+              <input type="text" size="20" data-conekta="card[name]"/>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-8 columns">
+          <div class="form-row">
+            <label>
+              <span>Número de Tarjeta de Crédito</span>
+              <input type="text" size="20" data-conekta="card[number]"/>
+            </label>
+          </div>
+        </div>
+        <div class="large-4 columns">
+          <div class="form-row">
+            <label>
+              <span>CVC</span>
+              <input type="text" size="4" data-conekta="card[cvc]"/>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="form-row">
+            <fieldset>
+              <legend> Fecha de expiración (MM/AAAA) </legend>
+                <div class="row">
+                  <div class="large-6 columns">
+                    <input type="text" size="2" data-conekta="card[exp_month]"/>
+                  </div>
+                  <div class="large-6 columns">
+                    <input type="text" size="4" data-conekta="card[exp_year]"/>
+                  </div>
+                </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+
+
+    </fieldset>
+    <button type="submit"> Pagar ahora </button>
+    <% end %>
+  </div>
+</div>
